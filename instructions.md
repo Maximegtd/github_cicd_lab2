@@ -61,6 +61,3 @@ Votre équipe veut mettre en place un processus de construction automatisé pour
 
 Les étapes précédantes devraient automatiquement générer des artefact dans Github
 
-8. Compléter le fichier `ci.yml` en ajoutant les fonctionalités suivantes :
-   - 
-
