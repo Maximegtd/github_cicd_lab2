@@ -16,19 +16,18 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-          cache: 'pip'
+          python-version: '3.10'
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Create Bundle
-        run: zip -r code-appli-python_bundle.zip app.py static templates
+      - name: Create artifact
+        run: zip -r app.zip .
 
       - uses: actions/upload-artifact@v2
         with:
-          name: code-appli-python_bundle
-          path: code-appli-python_bundle.zip
+          name: app.zip
+          path: app.zip
 
       - name: Create Release
         id: create_release
